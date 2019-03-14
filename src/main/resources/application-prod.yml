@@ -1,0 +1,13 @@
+server:
+  port: 8080
+logging:
+  config: classpath:log/logback.xml
+spring:
+  application:
+    name: xiaoxin
+  datasource:
+#    url: jdbc:mysql://172.27.0.14:3306/xiaoxin?useSSL=false&serverTimezone=GMT%2b8
+    url: jdbc:mysql://cd-cdb-m4t8tip0.sql.tencentcdb.com:63231/xiaoxin?useSSL=false&serverTimezone=GMT%2b8
+    username: root
+    password: mayun250*&^@#$%
+    driver-class-name: com.mysql.cj.jdbc.Driver
