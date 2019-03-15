@@ -14,10 +14,10 @@ import javax.servlet.http.HttpServletRequest;
 @Slf4j
 public abstract class BaseController {
 
-    @ExceptionHandler({BusinessException.class})
-    public Result<Void> businessExceptionHandler(HttpServletRequest request, BusinessException be){
+    @ExceptionHandler({GeneralException.class})
+    public ResponseResult<Void> businessExceptionHandler(HttpServletRequest request, GeneralException be){
         log.info(String.valueOf(be.getErrorCode()), be);
-        Result<Void> response = Result.failed(be);
+        ResponseResult<Void> response = ResponseResult.failed(be);
         return response;
     }
 
