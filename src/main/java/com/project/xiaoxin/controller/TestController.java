@@ -1,4 +1,4 @@
-package com.project.xiaoxin.service;
+package com.project.xiaoxin.controller;
 
 import com.project.xiaoxin.common.BaseController;
 import com.project.xiaoxin.common.Result;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/test")
 @Slf4j
-public class TestService extends BaseController {
+public class TestController extends BaseController {
 
     @GetMapping
     public Result<Void> test(){

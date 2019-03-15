@@ -29,15 +29,15 @@
             <property name="enableSubPackages" value="true"/>
         </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="com.project.xiaoxin.mybatisMapper"
+        <!--<sqlMapGenerator targetPackage="com.project.xiaoxin.mybatisMapper"
                          targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
-        </sqlMapGenerator>
+        </sqlMapGenerator>-->
 
-       <!-- <javaClientFenerator type="XMLMAPPER" targetPackage="com.project.xiaoxin.mybatisMapper"
+        <javaClientGenerator type="ANNOTATEDMAPPER" targetPackage="com.project.xiaoxin.mybatisMapper"
                              targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
-        </javaClientFenerator>-->
+        </javaClientGenerator>
         <table tableName="tb_agent"/>
         <table tableName="tb_lookafter"/>
         <table tableName="tb_op_hospital"/>

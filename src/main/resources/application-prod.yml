@@ -1,13 +1,29 @@
 server:
   port: 8080
-logging:
-  config: classpath:log/logback.xml
 spring:
   application:
     name: xiaoxin
   datasource:
-#    url: jdbc:mysql://172.27.0.14:3306/xiaoxin?useSSL=false&serverTimezone=GMT%2b8
+    #    url: jdbc:mysql://172.27.0.14:3306/xiaoxin?useSSL=false&serverTimezone=GMT%2b8
     url: jdbc:mysql://cd-cdb-m4t8tip0.sql.tencentcdb.com:63231/xiaoxin?useSSL=false&serverTimezone=GMT%2b8
     username: root
     password: mayun250*&^@#$%
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      max-active: 20
+      initial-size: 1
+      min-idle: 3
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+logging:
+  config: classpath:log/logback.xml
+debug: true
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+

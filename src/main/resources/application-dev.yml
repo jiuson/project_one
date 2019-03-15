@@ -4,9 +4,12 @@ spring:
   application:
     name: xaioxin
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/xiaoxin?useSSL=false&serverTimezone=GMT%2b8
+#    url: jdbc:mysql://127.0.0.1:3306/xiaoxin?useSSL=false&serverTimezone=GMT%2b8
+#    username: root
+#    password: 666666
+    url: jdbc:mysql://cd-cdb-m4t8tip0.sql.tencentcdb.com:63231/xiaoxin?useSSL=false&serverTimezone=GMT%2b8
     username: root
-    password: 666666
+    password: mayun250*&^@#$%
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
