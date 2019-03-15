@@ -5,6 +5,12 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * @program: project_one
+ * @description: base controller
+ * @author: andraw
+ * @create: 2019-03-15 15:11
+ */
 @Slf4j
 public abstract class BaseController {
 
@@ -18,5 +24,4 @@ public abstract class BaseController {
     public String getRemoteIp(HttpServletRequest request){
         return request.getHeader("x-forwarded-for") == null ? request.getRemoteAddr() : request.getHeader("x-forwarded-for");
     }
-
 }

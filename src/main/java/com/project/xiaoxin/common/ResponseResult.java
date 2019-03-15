@@ -18,7 +18,7 @@ public class ResponseResult<P> {
 
     public P deserialize(){
         if (!this.success){
-            throw new BusinessException(this.errorCode, this.errorMessage);
+            throw new GeneralException(this.errorCode, this.errorMessage);
         }else {
             return this.payload;
         }
@@ -37,14 +37,14 @@ public class ResponseResult<P> {
         return instance;
     }
 
-    public static ResponseResult<Void> failed(BusinessException be){
+    public static ResponseResult<Void> failed(GeneralException be){
         ResponseResult<Void> instance = new ResponseResult<>();
         instance.setErrorCode(be.getErrorCode());
         instance.setErrorMessage(be.getMessage());
         return instance;
     }
 
-    public static <P> ResponseResult<P> failed(BusinessException be, P payload){
+    public static <P> ResponseResult<P> failed(GeneralException be, P payload){
         ResponseResult<P> instance = new ResponseResult<>();
         instance.setErrorCode(be.getErrorCode());
         instance.setErrorMessage(be.getMessage());

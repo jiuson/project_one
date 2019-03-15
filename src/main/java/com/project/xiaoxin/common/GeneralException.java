@@ -1,11 +1,14 @@
 package com.project.xiaoxin.common;
 
+import lombok.Getter;
+
 /**
  * @program: project_one
  * @description: general exception
  * @author: andraw
  * @create: 2019-03-15 15:12
  */
+@Getter
 public class GeneralException extends RuntimeException{
 
     private int errorCode;
